@@ -1,0 +1,79 @@
+/*
+  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
+  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
+  Copyright (C) 2008-2013 Marco Costalba, Joona Kiiski, Tord Romstad
+
+  Stockfish is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Stockfish is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include <iostream>
+#include <string>
+
+#include "bitboard.h"
+#include "evaluate.h"
+#include "position.h"
+#include "search.h"
+#include "thread.h"
+#include "tt.h"
+#include "ucioption.h"
+
+void stopAnalyze();
+void stockfish_init();
+void startAnalyze(const std::string &command);
+
+static void main_(int argc, char* argv[]) {
+
+  std::cout << engine_info() << std::endl;
+
+  UCI::init(Options);
+  Bitboards::init();
+  Position::init();
+  Bitbases::init_kpk();
+  Search::init();
+  Pawns::init();
+  Eval::init();
+  Threads.init();
+  TT.set_size(Options["Hash"]);
+
+  std::string args;
+
+  for (int i = 1; i < argc; ++i)
+      args += std::string(argv[i]) + " ";
+
+  //UCI::loop(args);
+
+  //Threads.exit();
+}
+
+static bool __isStopped__ = true;
+
+void stockfish_init()
+{
+    main_(0, NULL);
+}
+
+void startAnalyze(const std::string &fen)
+{
+    __isStopped__ = false;
+    UCI::loop("stop");
+    UCI::loop("position fen " + fen);
+    UCI::loop("setoption name MultiPV value 2");
+    UCI::loop("go infinite");
+}
+
+void stopAnalyze()
+{
+    UCI::loop("stop");
+    __isStopped__ = true;
+}
