@@ -9,7 +9,5 @@ This distribution consists of the full source code for the book reader, includin
 This is a free software licensed under the GPL v3.0.
 <br>
 
-<center>
 <img src="http://a1.mzstatic.com/us/r30/Purple5/v4/2f/2d/54/2f2d54db-9aae-ddba-607a-a6e2aa2567b7/screen322x572.jpeg">
 <img src="http://a2.mzstatic.com/us/r30/Purple5/v4/0a/7f/6a/0a7f6a07-858c-de9e-f192-3210e982baf1/screen322x572.jpeg">
-</center>
