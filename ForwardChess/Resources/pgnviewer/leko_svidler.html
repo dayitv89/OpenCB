@@ -1,0 +1,115 @@
+<html><head>
+<style type='text/css'>
+body { background-color:#E0C8A0;color:#000000;font-size:10pt;line-height:12pt;font-family:Verdana; }
+a {color:#000000; text-decoration: none}
+a:hover {color:#FFFFFF; background-color:#806040}
+</style>
+<script language='JavaScript'>
+//if (! parent.frames[0]) location.href='ltpgnviewer.html?'+location.href;
+var boardObj = {
+	GetHTMLMoveText: function(vvariant, nnoscript, ccommenttype, sscoresheet){
+		alert('GetHTMLMoveText:'+vvariant);
+		return 'xxx';
+	},
+ 	ApplyPgnMoveText: function(ss, rroot, ddocument, ggame){
+		alert('ApplyPgnMoveText:'+ss);
+ 	},
+	IsComplete: function(){
+		return true;
+	},
+	Init: function(rr){
+		alert('Init:'+rr);
+	}
+};
+var PgnMoveText=new Array();
+var GameText=new Array();
+var FenText=new Array();
+PgnMoveText[0]='1.%20d4%20d5%202.%20g4%20g6%203.%20Ne3%20e6%204.%20Nf3%20Nd6%205.%20b3%20b6%206.%20Ne5%20Bb7%207.%20Bb2%20Nd7%208.%20g5%20Bxe5%209.%20dxe5%20Nf5%2010.%20Ng4%20Qf8%2011.%20f3%20h5%2012.%20gxh6%20Nxh6%2013.%20Nf6%20Ng8%2014.%20Nh7%20Qe7%2015.%20Ng5%20Re8%2016.%20f4%20O-O-O%2017.%20Rd2%20Nh6%2018.%20O-O-O%20Nc5%2019.%20Nh7%20Ne4%2020.%20Bxe4%20dxe4%2021.%20Rxd8+%20Rxd8%2022.%20Rxd8+%201/2-1/2%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[0]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.14%22%5D%3Cbr%20/%3E%5BRound%20%221%22%5D%3Cbr%20/%3E%5BWhite%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%221/2-1/2%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222723%22%5D%3Cbr%20/%3E%5BBlackElo%20%222739%22%5D%3Cbr%20/%3E%5BSetUp%20%221%22%5D%3Cbr%20/%3E%5BFEN%20%22rkbrnnqb/pppppppp/8/8/8/8/PPPPPPPP/RKBRNNQB%22%5D%3Cbr%20/%3E';
+FenText[0]='rkbrnnqb/pppppppp/8/8/8/8/PPPPPPPP/RKBRNNQB';
+PgnMoveText[1]='1.%20e4%20c5%202.%20Ng3%20e6%203.%20Ne3%20Ng6%204.%20c3%20Nc6%205.%20Bc2%20Bf4%206.%20O-O-O%20O-O-O%207.%20Kb1%20d5%208.%20exd5%20exd5%209.%20d4%20Kb8%2010.%20Ngf5%20c4%2011.%20g3%20Bxe3%2012.%20fxe3%20f6%2013.%20e4%20Bf7%2014.%20exd5%20Bxd5%2015.%20Ne3%20Qf7%2016.%20Nxd5%20Qxd5%2017.%20g4%20Rge8%2018.%20Bg3+%20Ka8%2019.%20Qh3%20Nf8%2020.%20Rge1%20h6%2021.%20Qf1%20Nd7%2022.%20Rxe8%20Rxe8%2023.%20Re1%20Re7%2024.%20Rxe7%20Nxe7%2025.%20Qe1%20Qf7%2026.%20h4%20g5%2027.%20h5%20Nb6%2028.%20Qe4%20Nbd5%2029.%20a4%20a6%2030.%20Qe2%20f5%2031.%20Qxc4%20fxg4%2032.%20Be4%20Qe6%2033.%20Be5%20g3%2034.%20Qd3%20Nf4%2035.%20Qxg3%20Nc6%2036.%20Qf3%20Nxe5%2037.%20Bxb7+%20Ka7%2038.%20dxe5%20Qxe5%2039.%20Be4%20Kb8%2040.%20Qe3%20Kc7%2041.%20Qa7+%20Kd8%2042.%20Qa8+%20Ke7%2043.%20Qb7+%20Kf8%2044.%20Bf3%20Qf5+%2045.%20Ka1%20g4%2046.%20Qb8+%20Kf7%2047.%20Qb7+%20Kf8%2048.%20Qb8+%20Kf7%2049.%20Qb7+%20Kf8%201/2-1/2%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[1]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.14%22%5D%3Cbr%20/%3E%5BRound%20%222%22%5D%3Cbr%20/%3E%5BWhite%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%221/2-1/2%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222739%22%5D%3Cbr%20/%3E%5BBlackElo%20%222723%22%5D%3Cbr%20/%3E%5BFEN%20%22rbknbqrn/pppppppp/8/8/8/8/PPPPPPPP/RBKNBQRN%22%5D%3Cbr%20/%3E';
+FenText[1]='rbknbqrn/pppppppp/8/8/8/8/PPPPPPPP/RBKNBQRN';
+PgnMoveText[2]='1.%20e4%20g6%202.%20g3%20d6%203.%20Ne3%20c5%204.%20f4%20Nc6%205.%20Qf2%20f5%201/2-1/2%206.%20O-O%20Be6%207.%20Nc3%20Nd7%208.%20d3%20Qf7%209.%20Ncd5%20O-O-O%2010.%20Rb1%20fxe4%2011.%20dxe4%20Bh3%2012.%20Rd1%20e6%2013.%20Nc4%20Qf8%2014.%20Nde3%20Nf6%2015.%20c3%20d5%2016.%20exd5%20exd5%2017.%20Bxd5%20Nxd5%2018.%20Rxd5%20Rxd5%2019.%20Nxd5%20Rd8%2020.%20Nde3%20Qf5%2021.%20Ra1%20Qd3%2022.%20Nd2%20g5%2023.%20fxg5%20Ne5%2024.%20Nf3%20Nxf3+%2025.%20Qxf3%20Be6%2026.%20Qf1%20Qe4%2027.%20Qg2%20Qd3%2028.%20Qf1%20Qe4%2029.%20Qg2%20Qd3%201/2-1/2%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[2]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.15%22%5D%3Cbr%20/%3E%5BRound%20%223%22%5D%3Cbr%20/%3E%5BWhite%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%221/2-1/2%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222739%22%5D%3Cbr%20/%3E%5BBlackElo%20%222723%22%5D%3Cbr%20/%3E%5BFEN%20%22rnbkrnqb/pppppppp/8/8/8/8/PPPPPPPP/RNBKRNQB%22%5D%3Cbr%20/%3E';
+FenText[2]='rnbkrnqb/pppppppp/8/8/8/8/PPPPPPPP/RNBKRNQB';
+PgnMoveText[3]='1.%20b3%20f6%202.%20e4%20d5%203.%20exd5%20Bxd5%204.%20f3%20Ng6%205.%20c4%20Bf7%206.%20d4%20O-O%207.%20Ne2%20c6%208.%20Ne3%20e5%209.%20Bxg6%20Bxg6%2010.%20d5%20b5%2011.%20Bf2%20Nb6%2012.%20Nc3%20b4%2013.%20Na4%20Nxa4%2014.%20bxa4%20a5%2015.%20O-O%20Ba7%2016.%20Qc1%20Bxe3%2017.%20Bxe3%20cxd5%2018.%20cxd5%20Rxd5%2019.%20Rxd5%20Qxd5%2020.%20Rf2%20Qd7%2021.%20Qc4+%20Bf7%2022.%20Qb5%20Qd1+%2023.%20Rf1%20Qd5%2024.%20Qxd5%20Bxd5%2025.%20Rf2%20Rb8%2026.%20Rd2%20Be6%2027.%20Kf2%20Kf7%2028.%20Bc5%20Rb7%2029.%20Ke3%20h5%2030.%20Bd6%20Bd7%2031.%20Rc2%20Ke6%2032.%20Rc7%20Rb6%2033.%20Bc5%20b3%2034.%20axb3%20Rxb3+%2035.%20Kf2%20Rb2+%2036.%20Kg1%20Bxa4%2037.%20Rxg7%20Bc6%2038.%20Ra7%20a4%2039.%20Ra6%20Kd5%2040.%20Be7%20f5%2041.%20h4%20e4%2042.%20fxe4+%20fxe4%2043.%20Bg5%20Rb8%2044.%20Ra5+%20Kc4%2045.%20Ra6%20Bb5%2046.%20Ra7%20Kb3%2047.%20Bf4%20Rb6%2048.%20Be3%20Rf6%2049.%20Bd4%20Rf5%2050.%20g4%20hxg4%2051.%20Kg2%20a3%2052.%20Kg3%20a2%2053.%20Kxg4%20Rd5%2054.%20Bf6%20e3%2055.%20Re7%20e2%2056.%20h5%20Rd6%2057.%20Bg7%20Rd7%2058.%20Re3+%20Kc2%2059.%20h6%20Kd2%2060.%20Ra3%20Rxg7+%2061.%20hxg7%20Bc4%200-1%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[3]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.15%22%5D%3Cbr%20/%3E%5BRound%20%224%22%5D%3Cbr%20/%3E%5BWhite%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%220-1%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222723%22%5D%3Cbr%20/%3E%5BBlackElo%20%222739%22%5D%3Cbr%20/%3E%5BFEN%20%22qbnrknbr/pppppppp/8/8/8/8/PPPPPPPP/QBNRKNBR%22%5D%3Cbr%20/%3E';
+FenText[3]='qbnrknbr/pppppppp/8/8/8/8/PPPPPPPP/QBNRKNBR';
+PgnMoveText[4]='1.%20e4%20e5%202.%20b3%20b6%203.%20f3%20Bc5%204.%20d4%20Bxd4%205.%20Bxd4%20exd4%206.%20Qxd4%20Ne7%207.%20Ne2%20O-O-O%208.%20O-O-O%20Nc6%209.%20Qd2%20Qf8%2010.%20Kb1%20f5%2011.%20exf5%20Qxf5%2012.%20Nc3%20Nf6%2013.%20Nd3%20Rhe8%2014.%20Nf4%20Bb7%2015.%20Bc4%20g5%2016.%20Nfd5%20Nxd5%2017.%20Bxd5%20Ne7%2018.%20Bxb7+%20Kxb7%2019.%20Rhe1%20d6%2020.%20Re4%20Nc6%2021.%20Qe2%20Rxe4%2022.%20Qxe4%20Rf8%2023.%20Qxf5%20Rxf5%2024.%20Ne4%20Re5%2025.%20c4%20g4%2026.%20Nf6%20gxf3%2027.%20gxf3%20h5%2028.%20f4%20Re2%2029.%20Nxh5%20Rxh2%2030.%20Nf6%20Ne7%2031.%20Nd5%20Nxd5%2032.%20Rxd5%20Rf2%2033.%20Rf5%20Kc6%201/2-1/2%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[4]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.16%22%5D%3Cbr%20/%3E%5BRound%20%225%22%5D%3Cbr%20/%3E%5BWhite%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%221/2-1/2%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222723%22%5D%3Cbr%20/%3E%5BBlackElo%20%222739%22%5D%3Cbr%20/%3E%5BFEN%20%22brnknbqr/pppppppp/8/8/8/8/PPPPPPPP/BRNKNBQR%22%5D%3Cbr%20/%3E';
+FenText[4]='brnknbqr/pppppppp/8/8/8/8/PPPPPPPP/BRNKNBQR';
+PgnMoveText[5]='1.%20e4%20f6%202.%20Ne3%20e5%203.%20f3%20Be6%204.%20c3%20c6%205.%20Nb3%20d5%206.%20Bf2%20Bd6%207.%20d4%20Nb6%208.%20Bd3%20dxe4%209.%20fxe4%20O-O%2010.%20Nf5%20Bxf5%2011.%20exf5%20Nd5%2012.%20dxe5%20Bxe5%2013.%20O-O%20Bf4%2014.%20Qd1%20Qc7%2015.%20g3%20Be3%2016.%20Qf3%20Bxf2+%2017.%20Qxf2%20b6%2018.%20Nd4%20Qd6%2019.%20Bc4%20Re5%2020.%20Rd1%20Rfe8%2021.%20Rd2%20Kh8%2022.%20Bxd5%20cxd5%2023.%20Rfd1%20Nf7%2024.%20Kg2%20Ng5%2025.%20Rd3%20Qd7%2026.%20Qf4%20h6%2027.%20b3%20Ne4%2028.%20Re3%20Nd6%2029.%20Rf3%20Re4%2030.%20Qd2%20R8e5%2031.%20Rdf1%20Nb5%2032.%20Qd3%20Nxd4%2033.%20cxd4%20Re8%2034.%20R1f2%20Qd6%2035.%20Rf4%20Re3%2036.%20Qa6%20Qd7%2037.%20Rc2%20Kh7%2038.%20Qf1%20R8e4%2039.%20Rcf2%20Qe7%2040.%20Kh3%20Qe8%2041.%20Qd1%20Rxf4%2042.%20Rxf4%20Re2%2043.%20Qf1%20Rxa2%2044.%20Rf2%20Rxf2%2045.%20Qxf2%20Qe4%2046.%20b4%20a5%2047.%20bxa5%20bxa5%2048.%20g4%20a4%2049.%20Qb2%20h5%2050.%20gxh5%20Qxf5+%2051.%20Kg3%20Qxh5%2052.%20Qb4%20Qg6+%2053.%20Kh3%20Qd3+%2054.%20Kg4%20a3%200-1%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[5]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.16%22%5D%3Cbr%20/%3E%5BRound%20%226%22%5D%3Cbr%20/%3E%5BWhite%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%220-1%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222739%22%5D%3Cbr%20/%3E%5BBlackElo%20%222723%22%5D%3Cbr%20/%3E%5BFEN%20%22nbqnrkbr/pppppppp/8/8/8/8/PPPPPPPP/NBQNRKBR%22%5D%3Cbr%20/%3E';
+FenText[5]='nbqnrkbr/pppppppp/8/8/8/8/PPPPPPPP/NBQNRKBR';
+PgnMoveText[6]='1.%20Nb3%20c6%202.%20d4%20f5%203.%20c3%20g6%204.%20g4%20f4%205.%20O-O-O%20Nb6%206.%20e4%20fxe3%207.%20fxe3%20O-O-O%208.%20Bg3%20d6%209.%20e4%20Bf7%2010.%20Ne3%20Nfd7%2011.%20Qf3%20Rgf8%2012.%20Qe2%20Qg8%2013.%20Bc2%20Nc4%2014.%20g5%20Nxe3%2015.%20Qxe3%20Nb6%2016.%20Nd2%20e5%2017.%20dxe5%20dxe5%2018.%20b3%20Be6%2019.%20Kb2%20Qg7%2020.%20Rgf1%20Qe7%2021.%20h4%20Bd6%2022.%20Rxf8%20Rxf8%2023.%20Rf1%20Rxf1%2024.%20Nxf1%20Bc5%2025.%20Qd3%20Nd7%2026.%20Kb1%20Qd6%2027.%20Qxd6%20Bxd6%2028.%20Nd2%20Kd8%2029.%20Bd3%20Ke7%2030.%20Kc2%20b5%2031.%20Be2%201/2-1/2%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[6]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.17%22%5D%3Cbr%20/%3E%5BRound%20%227%22%5D%3Cbr%20/%3E%5BWhite%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%221/2-1/2%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222739%22%5D%3Cbr%20/%3E%5BBlackElo%20%222723%22%5D%3Cbr%20/%3E%5BFEN%20%22nbrkbnrq/pppppppp/8/8/8/8/PPPPPPPP/NBRKBNRQ%22%5D%3Cbr%20/%3E';
+FenText[6]='nbrkbnrq/pppppppp/8/8/8/8/PPPPPPPP/NBRKBNRQ';
+PgnMoveText[7]='1.%20d4%20d5%202.%20g3%20g6%203.%20O-O%20O-O%204.%20b3%20Nc6%205.%20e3%20b6%206.%20c4%20dxc4%207.%20bxc4%20Nd6%208.%20Nd2%20Na5%209.%20Bxa8%20Rxa8%2010.%20Ncb3%20Naxc4%2011.%20Nxc4%20Nxc4%2012.%20Rc1%20Qa4%2013.%20Qe2%20b5%2014.%20Nc5%20Qa5%2015.%20Bc3%20Qa3%2016.%20Rc2%20b4%2017.%20Rb1%20bxc3%2018.%20Rb3%20Qa5%2019.%20Qxc4%20Rfb8%2020.%20Rcxc3%20Rxb3%2021.%20Rxb3%20e5%2022.%20dxe5%20Bxe5%2023.%20Nd7%20Rd8%2024.%20Rd3%20Bg7%2025.%20Ne5%20Rf8%2026.%20Nc6%20Qh5%2027.%20Kg2%20Qe2%2028.%20Rd4%20Qxc4%2029.%20Rxc4%20Ra8%2030.%20Ne7+%20Kf8%2031.%20Rxc7%20Be5%2032.%20Rb7%20a5%2033.%20Nc6%20Bd6%2034.%20Rd7%20Bc5%2035.%20Rd5%20Bb6%2036.%20a4%20Ke8%2037.%20Kf3%20Bc7%2038.%20Rb5%20Ra6%2039.%20Nd4%20h5%2040.%20Ke4%20Bb6%2041.%20Nc6%20Bc7%2042.%20Kd5%20Kd7%2043.%20Ne5+%20Kc8%2044.%20Nc4%20Kd7%2045.%20e4%20f6%2046.%20f4%20h4%2047.%20e5%20hxg3%2048.%20hxg3%20fxe5%2049.%20fxe5%20g5%2050.%20Rb7%20Kc8%2051.%20Rb1%20Rh6%2052.%20Nd6+%20Bxd6%2053.%20exd6%20Rh2%2054.%20Rb5%20Kd7%2055.%20Rxa5%20Rd2+%2056.%20Ke5%20Re2+%2057.%20Kf5%20Kxd6%2058.%20Kxg5%20Ke7%2059.%20Rf5%20Ra2%2060.%20a5%20Ra4%2061.%20g4%20Ke6%2062.%20Rf6+%20Ke7%2063.%20a6%201-0%20%3Cbr%20/%3E%3Cbr%20/%3E%20';
+GameText[7]='%5BEvent%20%22Chess%20Classic%20Mainz%202003%20%28Chess960%29%22%5D%3Cbr%20/%3E%5BSite%20%22Mainz%2C%20GER%22%5D%3Cbr%20/%3E%5BDate%20%222003.08.17%22%5D%3Cbr%20/%3E%5BRound%20%228%22%5D%3Cbr%20/%3E%5BWhite%20%22Svidler%2C%20Peter%22%5D%3Cbr%20/%3E%5BBlack%20%22Leko%2C%20Peter%22%5D%3Cbr%20/%3E%5BResult%20%221-0%22%5D%3Cbr%20/%3E%5BWhiteElo%20%222723%22%5D%3Cbr%20/%3E%5BBlackElo%20%222739%22%5D%3Cbr%20/%3E%5BFEN%20%22bnnrqkrb/pppppppp/8/8/8/8/PPPPPPPP/BNNRQKRB%22%5D%3Cbr%20/%3E';
+FenText[7]='bnnrqkrb/pppppppp/8/8/8/8/PPPPPPPP/BNNRQKRB';
+function OpenGame(nn)
+{ 
+	if (boardObj.IsComplete){ 
+  		if (boardObj.IsComplete()){ 
+    		if (nn>=0){ 
+      			if (FenText[nn]) 
+      				boardObj.Init(unescape(FenText[nn]));
+        		else boardObj.Init('');
+					boardObj.ApplyPgnMoveText(unescape(PgnMoveText[nn]),'#CCCCCC',window.document); //variants possible
+					if (document.getElementById) document.getElementById('GameText').innerHTML=unescape(GameText[nn])+'<br />'+boardObj.GetHTMLMoveText(0,false,true); //pgn with html links
+					else if (document.GameTextLayer) { 
+						with(document.GameTextLayer) { 
+							document.open(); 
+							document.write(unescape(GameText[nn])+'<br />'+boardObj.GetHTMLMoveText(0,false,true)); 
+							document.close(); 
+							}
+					}//pgn with html links
+      }
+      return;
+    }
+  }
+  //setTimeout('OpenGame('+nn+')',400);
+}
+function OpenGame_original(nn)
+{ 
+	if (parent.frames[0].IsComplete){ 
+  		if (parent.frames[0].IsComplete()){ 
+    		if (nn>=0){ 
+      			if (FenText[nn]) 
+      				parent.frames[0].Init(unescape(FenText[nn]));
+        		else parent.frames[0].Init('');
+					//parent.frames[0].SetPgnMoveText(unescape(PgnMoveText[nn])); //variants not possible
+					parent.frames[0].ApplyPgnMoveText(unescape(PgnMoveText[nn]),'#CCCCCC',window.document); //variants possible
+					//document.getElementById('GameText').innerHTML=unescape(GameText[nn])+'<br />'+PgnMoveText[nn]; //pgn without html links
+					if (document.getElementById) document.getElementById('GameText').innerHTML=unescape(GameText[nn])+'<br />'+parent.frames[0].GetHTMLMoveText(0,false,true); //pgn with html links
+					else if (document.GameTextLayer) { with(document.GameTextLayer) { document.open(); document.write(unescape(GameText[nn])+'<br />'+parent.frames[0].GetHTMLMoveText(0,false,true)); document.close(); }}//pgn with html links
+      }
+      return;
+    }
+  }
+  setTimeout('OpenGame('+nn+')',400);
+}
+
+function SetMove(mm,vv){ 
+//tmp	if (parent.frames[0].SetMove) parent.frames[0].SetMove(mm,vv); 
+	alert(mm+'/'+vv);
+}
+</script>
+</head><body>
+<H3>Leko - Svidler<BR>
+Chess Classic Mainz 2003 (Chess960)</H3>
+<FORM><SELECT onChange='OpenGame(this.options[selectedIndex].value)' SIZE=1>
+<OPTION VALUE=-1>Select a game !
+<OPTION VALUE=0>Svidler, Peter - Leko, Peter 1/2-1/2
+<OPTION VALUE=1>Leko, Peter - Svidler, Peter 1/2-1/2
+<OPTION VALUE=2>Leko, Peter - Svidler, Peter 1/2-1/2
+<OPTION VALUE=3>Svidler, Peter - Leko, Peter 0-1
+<OPTION VALUE=4>Svidler, Peter - Leko, Peter 1/2-1/2
+<OPTION VALUE=5>Leko, Peter - Svidler, Peter 0-1
+<OPTION VALUE=6>Leko, Peter - Svidler, Peter 1/2-1/2
+<OPTION VALUE=7>Svidler, Peter - Leko, Peter 1-0
+</SELECT></FORM>
+<div id='GameText'> </div>
+<layer id='GameTextLayer'> </layer>
+<!--generated with LT-PGN-VIEWER 3.0--></body></html>

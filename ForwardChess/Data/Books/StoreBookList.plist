@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>author</key>
+		<string>Forward Chess Team</string>
+		<key>icon</key>
+		<string>ForwardChess_cover.jpg</string>
+		<key>name</key>
+		<string>User Guide and Samples</string>
+		<key>path</key>
+		<string>book1</string>
+		<key>id</key>
+		<string>forwardChess.userGuide</string>
+	</dict>
+</array>
+</plist>
