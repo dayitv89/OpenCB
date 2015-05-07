@@ -2,7 +2,7 @@ Forward Chess is an Interactive reader of chess books. Play through the lines in
 
 <b><big>Files</big></b>
 
-This distribution of ForwardChess consists of the full source code for the book reader, including a Xcode project that can be compiled. A few sample books are included. This is a free software, contributions for the books or source code is welcome.
+This distribution consists of the full source code for the book reader, including a Xcode project that can be compiled. A few sample books are included. This is a free software, contributions for the books or source code is welcome.
 
 <br>
 
