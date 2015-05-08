@@ -4,7 +4,7 @@ FreeCB is an interactive reader of chess books. Play through the lines in the bo
 
 <b><big>Files</big></b>
 
-This distribution consists of the full source code for the book reader, including a Xcode project that can be compiled. A few sample books are included. Contributions for the books or source code is welcome.
+This distribution consists of the full source code for the book reader, including a Xcode project that can be compiled. A few sample books are included. Contributions for books or source code is welcome.
 
 <b><big>License</big></b>
 
