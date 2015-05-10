@@ -6,7 +6,7 @@
 #import "ForwardChessAppDelegate.h"
 #import "Flurry.h"
 
-#import "GAI.h"
+//#import "GAI.h"
 #import "GAITracker.h"
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
@@ -92,12 +92,12 @@ static NSNumber *__fuckingHackOffset__;
         }
         
         self.screenName = @"Book Screen";
-        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-        [tracker set:kGAIScreenName value:@"Book Screen"];
-        [tracker send:[[GAIDictionaryBuilder createAppView] build]];
-        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX" action:@"bookName" label:bookData.title value:nil] build]];
+        //id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        //[tracker set:kGAIScreenName value:@"Book Screen"];
+        //[tracker send:[[GAIDictionaryBuilder createAppView] build]];
+        //[tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX" action:@"bookName" label:bookData.title value:nil] build]];
         // Clear the screen name field when we're done.
-        [tracker set:kGAIScreenName value:nil];
+        //[tracker set:kGAIScreenName value:nil];
 
         UIMenuItem * const customItem = [[UIMenuItem alloc] initWithTitle:@"Highlight" action:@selector(customHighlightAction)];
         [[UIMenuController sharedMenuController] setMenuItems:[NSArray arrayWithObjects:customItem, nil]];

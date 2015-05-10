@@ -85,14 +85,9 @@
         NSSortDescriptor* sortDescriptor = [[NSSortDescriptor alloc]
                                             initWithKey:@"dateUploaded" ascending:NO];
         sortDescriptors = [[NSArray alloc] initWithObjects: sortDescriptor, nil];
-        
-        
 
-        
-        
         [self performFetch];
-        
-        
+
         //6 Adding Transaction Observer
         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
         
@@ -113,10 +108,7 @@
 - (void) onTap: (UITapGestureRecognizer *) sender{
     if(UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)){
         [storeDetailsWebView removeFromSuperview];
-        
-        
     }
-    
 }
 
 - (void) sortAndFilterData:(NSString *) pubName{
@@ -156,8 +148,8 @@
     [self didRotateFromInterfaceOrientation:nil];
     
     //refresh store only once
-    if ( ! storeRefreshed) {
-        
+    if ( ! storeRefreshed)
+    {
         [self loadPlistFile];
         storeRefreshed = YES;
     }    
@@ -199,12 +191,14 @@
 -(void) loadPlistFile
 {
     responseData = [[NSMutableData alloc] init];
+
+    //http://chess-stars.com/ipad/books.plist
     
-    NSURLRequest * const theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://chess-stars.com/ipad/books.plist"] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60.0];
-    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    NSURLRequest * const request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://smallchess.com/OpenCB/books.plist"] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60.0];
+    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
     if (theConnection) {
         //NSLog(@"Connection open.");
-        
     }
     else {
         //NSLog(@"Failed connecting.");
@@ -310,9 +304,6 @@
             }
         }
     
-        
-        
-        
         if (storeItem == nil) {
             
             for (NSDictionary *localItem in remoteArray) {

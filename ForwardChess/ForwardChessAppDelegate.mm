@@ -4,7 +4,7 @@
 #import "StoreTableViewController.h"
 #import "StorePublishersViewController.h"
 #import "Flurry.h"
-#import "GAI.h"
+//#import "GAI.h"
 #import "Appirater.h"
 
 #import "Board/bitboard.h"
@@ -81,19 +81,17 @@ extern void stockfish_init();
     [defaultDefaults setObject:[NSNumber numberWithBool:YES] forKey:constAutscrollEnabled];
     [defaultDefaults setObject:[NSNumber numberWithInt:constBoardSizePercentageDefault] forKey:constBoardSizePercentage];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultDefaults];
-    
-    
+
     //Flurry account:
     //dshadow3@mail.bg
     //pass is dig.....
-    [Flurry setCrashReportingEnabled:YES];
-    [Flurry startSession:@"TVH4NQ7R7M6SKCH3DX26"];
-    
+    //[Flurry setCrashReportingEnabled:YES];
+    //[Flurry startSession:@"TVH4NQ7R7M6SKCH3DX26"];
     
     //Google analitycs:
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
-    [GAI sharedInstance].dispatchInterval = 20;
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    //[GAI sharedInstance].trackUncaughtExceptions = YES;
+    //[GAI sharedInstance].dispatchInterval = 20;
+    //[[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     //id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-46105122-4"];
 
     interceptorWindow = [[InterceptorWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
