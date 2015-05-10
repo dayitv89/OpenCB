@@ -47,7 +47,6 @@
 		AC181D1E174CAA1900FEEF56 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC181D1D174CAA1900FEEF56 /* Default-568h@2x.png */; };
 		AC181D21174CAB8B00FEEF56 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AC181D1F174CAB8B00FEEF56 /* Default.png */; };
 		AC181D22174CAB8B00FEEF56 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC181D20174CAB8B00FEEF56 /* Default@2x.png */; };
-		AC24491018B5E280005CF1BB /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC24490F18B5E280005CF1BB /* libFlurry_4.3.2.a */; };
 		AC2790981733CAD200984582 /* StorePublishersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2790971733CAD200984582 /* StorePublishersViewController.m */; };
 		AC388F48169CAD72002D9742 /* verfig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC388F45169CAD72002D9742 /* verfig.ttf */; };
 		AC388F49169CAD72002D9742 /* verfigb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC388F46169CAD72002D9742 /* verfigb.ttf */; };
@@ -68,7 +67,6 @@
 		AC464D2018BC77790087D85B /* PT-FuturisExtraBoldCyrillicA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC464D1618BC77790087D85B /* PT-FuturisExtraBoldCyrillicA.ttf */; };
 		AC464D2118BC77790087D85B /* PT-NewtonBoldItalicCyrillicA.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC464D1718BC77790087D85B /* PT-NewtonBoldItalicCyrillicA.ttf */; };
 		AC64E81A161B5CA500C97B4F /* SHKActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = AC64E819161B5CA500C97B4F /* SHKActivityIndicator.m */; };
-		ACA281FF18B625380071C9E7 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA281F718B625380071C9E7 /* libGoogleAnalyticsServices.a */; };
 		ACE28C3916AC5A5E00FABC42 /* ForwardChess_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACE28C3816AC5A5E00FABC42 /* ForwardChess_cover.jpg */; };
 		BACC6C961607147100D2887F /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACC6C941607147100D2887F /* OptionsViewController.m */; };
 		BACC6C9A1607178200D2887F /* OptionsViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACC6C991607178200D2887F /* OptionsViewController~ipad.xib */; };
@@ -153,6 +151,8 @@
 		EF666CE9191BD4C900E4EA31 /* tt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF666CD1191BD4C900E4EA31 /* tt.cpp */; };
 		EF666CEA191BD4C900E4EA31 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF666CD4191BD4C900E4EA31 /* uci.cpp */; };
 		EF666CEB191BD4C900E4EA31 /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF666CD5191BD4C900E4EA31 /* ucioption.cpp */; };
+		EFB91E871AFF82C8001DAE8C /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB91E861AFF82C8001DAE8C /* libFlurry_4.3.2.a */; };
+		EFB91E891AFF83FC001DAE8C /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB91E881AFF83FC001DAE8C /* libGoogleAnalyticsServices.a */; };
 		EFEDB956193F2B8B00F536FA /* bitbase.mm in Sources */ = {isa = PBXBuildFile; fileRef = EFEDB935193F2B8B00F536FA /* bitbase.mm */; };
 		EFEDB957193F2B8B00F536FA /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFEDB936193F2B8B00F536FA /* bitboard.cpp */; };
 		EFEDB958193F2B8B00F536FA /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFEDB938193F2B8B00F536FA /* color.cpp */; };
@@ -238,7 +238,6 @@
 		AC181D1D174CAA1900FEEF56 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AC181D1F174CAB8B00FEEF56 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AC181D20174CAB8B00FEEF56 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AC24490F18B5E280005CF1BB /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
 		AC24491118B5E448005CF1BB /* ChessInfSerif@Figures-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChessInfSerif@Figures-Bold.otf"; sourceTree = "<group>"; };
 		AC24491218B5E448005CF1BB /* ChessInfSerif@Figures-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChessInfSerif@Figures-Italic.otf"; sourceTree = "<group>"; };
 		AC24491318B5E448005CF1BB /* ChessInfSerif@Figures-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChessInfSerif@Figures-Regular.otf"; sourceTree = "<group>"; };
@@ -265,7 +264,6 @@
 		AC64E818161B5CA500C97B4F /* SHKActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKActivityIndicator.h; sourceTree = "<group>"; };
 		AC64E819161B5CA500C97B4F /* SHKActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKActivityIndicator.m; sourceTree = "<group>"; };
 		AC952CB21731367E0018A6AC /* ForwardChess2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ForwardChess2.xcdatamodel; sourceTree = "<group>"; };
-		ACA281F718B625380071C9E7 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ForwardChess/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		ACA281F918B625380071C9E7 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		ACA281FA18B625380071C9E7 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		ACA281FB18B625380071C9E7 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
@@ -426,6 +424,8 @@
 		EF666CD4191BD4C900E4EA31 /* uci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uci.cpp; path = "stockfish-dd-src/src/uci.cpp"; sourceTree = SOURCE_ROOT; };
 		EF666CD5191BD4C900E4EA31 /* ucioption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ucioption.cpp; path = "stockfish-dd-src/src/ucioption.cpp"; sourceTree = SOURCE_ROOT; };
 		EF666CD6191BD4C900E4EA31 /* ucioption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ucioption.h; path = "stockfish-dd-src/src/ucioption.h"; sourceTree = SOURCE_ROOT; };
+		EFB91E861AFF82C8001DAE8C /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
+		EFB91E881AFF83FC001DAE8C /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../QF/ForwardChess/forwardChess/ForwardChess/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		EFEDB934193F2B8B00F536FA /* bitbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitbase.h; sourceTree = "<group>"; };
 		EFEDB935193F2B8B00F536FA /* bitbase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = bitbase.mm; sourceTree = "<group>"; };
 		EFEDB936193F2B8B00F536FA /* bitboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
@@ -472,15 +472,15 @@
 			files = (
 				C07D0853185BDE40008F1830 /* SystemConfiguration.framework in Frameworks */,
 				C07D084F185BDE2E008F1830 /* Security.framework in Frameworks */,
+				EFB91E871AFF82C8001DAE8C /* libFlurry_4.3.2.a in Frameworks */,
 				BAFFCA1D1589D2E10065E38A /* libz.1.2.5.dylib in Frameworks */,
 				8CA7BB3F139F072D00A968D1 /* StoreKit.framework in Frameworks */,
 				54E174451381B46200C1A8FD /* UIKit.framework in Frameworks */,
 				54E174471381B46200C1A8FD /* Foundation.framework in Frameworks */,
 				54E174491381B46200C1A8FD /* CoreGraphics.framework in Frameworks */,
+				EFB91E891AFF83FC001DAE8C /* libGoogleAnalyticsServices.a in Frameworks */,
 				54E1744B1381B46200C1A8FD /* CoreData.framework in Frameworks */,
-				ACA281FF18B625380071C9E7 /* libGoogleAnalyticsServices.a in Frameworks */,
 				75E0397613FCFA390098AB80 /* QuartzCore.framework in Frameworks */,
-				AC24491018B5E280005CF1BB /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,8 +523,9 @@
 		54E174431381B46200C1A8FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFB91E881AFF83FC001DAE8C /* libGoogleAnalyticsServices.a */,
+				EFB91E861AFF82C8001DAE8C /* libFlurry_4.3.2.a */,
 				BAFFCA1C1589D2E10065E38A /* libz.1.2.5.dylib */,
-				ACA281F718B625380071C9E7 /* libGoogleAnalyticsServices.a */,
 				C07D0852185BDE40008F1830 /* SystemConfiguration.framework */,
 				C07D0850185BDE35008F1830 /* AdSupport.framework */,
 				C07D084E185BDE2E008F1830 /* Security.framework */,
@@ -786,7 +787,6 @@
 			isa = PBXGroup;
 			children = (
 				C07D084B185BDD00008F1830 /* Flurry.h */,
-				AC24490F18B5E280005CF1BB /* libFlurry_4.3.2.a */,
 			);
 			path = Flurry;
 			sourceTree = "<group>";
@@ -1366,6 +1366,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/forwardChess/Flurry",
 					"$(SRCROOT)/forwardChess/",
+					"$(PROJECT_DIR)",
+					/Users/tedwong/Sources/QF/ForwardChess/forwardChess/ForwardChess,
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Forward Chess";
@@ -1398,6 +1400,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/forwardChess/Flurry",
 					"$(SRCROOT)/forwardChess/",
+					"$(PROJECT_DIR)",
+					/Users/tedwong/Sources/QF/ForwardChess/forwardChess/ForwardChess,
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Forward Chess";
@@ -1450,6 +1454,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/forwardChess/Flurry",
 					"$(SRCROOT)/forwardChess/",
+					"$(PROJECT_DIR)",
+					/Users/tedwong/Sources/QF/ForwardChess/forwardChess/ForwardChess,
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "Forward Chess";
