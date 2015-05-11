@@ -10,7 +10,7 @@ This distribution consists of the full source code for the book reader, includin
 
 <b><big>License</big></b>
 
-This is an open-source free software licensed under the GPL v2.0.
+This is an open-source free software without any license restriction.
 
 <br>
 
