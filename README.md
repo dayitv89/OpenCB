@@ -1,3 +1,5 @@
+Author: Ted Wong
+
 <b><big>Chess Reader</big></b>
 
 FreeCB is an interactive reader of chess books. Play through the lines in the book, or try your own, it's like having a chess board and a chess book in the palm of your hand.
