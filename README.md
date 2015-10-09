@@ -6,9 +6,9 @@ The project was started by Ted Wong (tedwong@smallchess.com) and is currently be
 
 <b><big>Files</big></b>
 
-This distribution consists of the full source code for the book reader, including a Xcode project that can be compiled. A few sample books are included. Contributions for books or source code is welcome.
+This distribution consists of the full source code for the book reader, including a Xcode project that can be compiled. A few sample books are included.
 
-Due to copyright laws, full books are not included.
+Due to copyright laws, full books are not included. Contributions for books or source code is welcome.
 
 <b><big>License</big></b>
 
